@@ -46,8 +46,24 @@ if(personalMovieDB.count < 10){
     console.log("Ошибка");
 }
 
+function showMyDB(){
+    if(personalMovieDB.privat == false){
+        console.log(personalMovieDB);
+    } else {
+        console.log("Доступ закрыт");
+    }
+
+}   
+
+function writeYourGenres(){
+
+    for(let i = 1; i <= 3; i++){
+        let genresWrite = prompt(`Ваш любимый жанр под номером ${i}`);
+        
+        personalMovieDB.genres[i - 1] = genresWrite;
+    }
     
-    
+}
 
    
 
